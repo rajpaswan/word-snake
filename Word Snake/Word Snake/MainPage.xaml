@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="Word_Snake.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Word_Snake"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FF14145A">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel.Transitions>
+                <TransitionCollection>
+                    <AddDeleteThemeTransition/>
+                </TransitionCollection>
+            </StackPanel.Transitions>
+            <Image x:Name="app_logo" Source="Assets/AppLogo.png" Stretch="Fill" Width="240">
+                <Image.Transitions>
+                    <TransitionCollection/>
+                </Image.Transitions>
+            </Image>
+            <Button x:Name="play_button" Content="Play" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="play_button_Click"/>
+            <Button x:Name="instructions_button" Content="Instructions" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button x:Name="settings_button" Content="Settings" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button x:Name="about_button" Content="About" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </StackPanel>
+    </Grid>
+</Page>

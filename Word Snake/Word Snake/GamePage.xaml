@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Word_Snake.GamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Word_Snake"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="main_grid" Background="#FF14145A">
+        <TextBlock x:Name="score_block" TextWrapping="Wrap" Text="Words : 0     Score : 0" VerticalAlignment="Top" FontSize="24" TextAlignment="Center" FontWeight="Bold" FontFamily="Assets/AGENCYR.TTF#Agency FB" Foreground="White" Margin="4"/>
+        <Grid x:Name="block_grid" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="info_block" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="24" TextAlignment="Center" FontWeight="Bold" FontFamily="Assets/AGENCYR.TTF#Agency FB" Foreground="White" Margin="4"/>
+        <Grid x:Name="layer_grid" Background="Transparent">
+            <Border x:Name="msg_group" VerticalAlignment="Center" BorderBrush="White" BorderThickness="0,4" >
+                <Border.Transitions>
+                    <TransitionCollection>
+                        <AddDeleteThemeTransition/>
+                    </TransitionCollection>
+                </Border.Transitions>
+                <StackPanel x:Name="msg_panel" Orientation="Vertical" Background="#99000000" Height="93">
+                    <TextBlock x:Name="title_block" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="48" TextAlignment="Center" FontWeight="Bold" FontFamily="Assets/AGENCYR.TTF#Agency FB" Foreground="White" Text="NEW GAME"/>
+                    <TextBlock x:Name="text_block" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="30" TextAlignment="Center" FontWeight="Bold" FontFamily="Assets/AGENCYR.TTF#Agency FB" Text="tap to play" Foreground="White"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <MediaElement x:Name="pick_media" AudioCategory="GameEffects" Source="Sounds/pick.wav" AutoPlay="False" Visibility="Collapsed"/>
+        <MediaElement x:Name="pop_media" AudioCategory="GameEffects" Source="Sounds/pop.wav" AutoPlay="False" Visibility="Collapsed"/>
+    </Grid>
+</Page>
